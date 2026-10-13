@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes Compétences - Ahmed Barkaoui</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #00205B; /* Bleu Airbus */
+      --bg-sidebar: #f8f9fa;
+      --text-color: #2c3e50;
+      --text-muted: #7f8c8d;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; color: var(--text-color); background-color: #fff; }
+    
+    .sidebar { width: 280px; background-color: var(--bg-sidebar); height: 100vh; position: fixed; padding: 30px 20px; border-right: 1px solid #e9ecef; display: flex; flex-direction: column; overflow-y: auto; }
+    .sidebar h3 { font-size: 1.1rem; margin-bottom: 20px; text-transform: uppercase; border-bottom: 2px solid var(--primary-color); padding-bottom: 5px; color: var(--primary-color); display: inline-block; }
+    .nav-links { list-style: none; margin-bottom: 30px; }
+    .nav-links li { margin-bottom: 12px; }
+    .nav-links a { text-decoration: none; color: var(--text-color); font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 10px; }
+    .nav-links a:hover, .nav-links a.active { color: var(--primary-color); }
+
+    .contact-box { font-size: 0.85rem; color: var(--text-muted); margin-top: auto; padding-top: 20px; }
+    .contact-box h4 { color: var(--primary-color); margin-bottom: 10px; border-bottom: 2px solid var(--primary-color); padding-bottom: 3px; display: inline-block; }
+    .contact-box p { margin-bottom: 8px; line-height: 1.4; }
+    .contact-box a { color: var(--primary-color); text-decoration: none; word-break: break-all; }
+
+    .main-content { margin-left: 280px; padding: 50px; width: calc(100% - 280px); }
+    .header-bar { display: flex; justify-content: space-between; align-items: center; padding-bottom: 15px; border-bottom: 2px solid var(--primary-color); margin-bottom: 40px; }
+    .header-bar h1 { font-size: 1.4rem; color: var(--primary-color); }
+    .header-bar span { font-weight: normal; color: var(--text-muted); font-size: 1rem; }
+
+    .page-title { font-size: 2.2rem; color: var(--primary-color); margin-bottom: 10px; border-bottom: 3px solid var(--primary-color); padding-bottom: 5px; display: inline-block; }
+    .page-subtitle { color: var(--text-muted); font-size: 1rem; margin-bottom: 40px; }
+
+    /* Skills Sections */
+    .skills-section {
+      border: 1px solid #e0e6ed;
+      border-left: 5px solid var(--primary-color);
+      border-radius: 8px;
+      padding: 30px;
+      background: #fff;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    }
+    .skills-section h2 {
+      font-size: 1.3rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 15px;
+    }
+
+    .skill-card {
+      background: #f8f9fa;
+      border: 1px solid #eaeaea;
+      padding: 15px;
+      border-radius: 6px;
+    }
+    .skill-card h4 { font-size: 1rem; color: #2c3e50; margin-bottom: 5px; }
+    .skill-card p { font-size: 0.83rem; color: #7f8c8d; line-height: 1.4; }
+
+    .cert-list { display: flex; flex-direction: column; gap: 12px; }
+    .cert-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #f8f9fa;
+      padding: 12px 18px;
+      border-radius: 6px;
+      border: 1px solid #eaeaea;
+    }
+    .cert-name { font-size: 0.95rem; font-weight: 600; color: #2c3e50; }
+    .cert-issuer { font-size: 0.83rem; color: #e74c3c; font-weight: bold; }
+
+    @media (max-width: 900px) {
+      body { flex-direction: column; }
+      .sidebar { width: 100%; height: auto; position: relative; }
+      .main-content { margin-left: 0; width: 100%; padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h3>Menu</h3>
+    <ul class="nav-links">
+      <li><a href="index.html"><i class="fa-solid fa-house"></i> ACCUEIL</a></li>
+      <li><a href="Education.html"><i class="fa-solid fa-graduation-cap"></i> FORMATION</a></li>
+      <li><a href="Experience.html"><i class="fa-solid fa-briefcase"></i> EXPÉRIENCES</a></li>
+      <li><a href="Projects.html"><i class="fa-solid fa-diagram-project"></i> PROJETS</a></li>
+      <li><a href="Skills.html" class="active"><i class="fa-solid fa-gears"></i> COMPÉTENCES</a></li>
+    </ul>
+
+    <div class="contact-box">
+      <h4>Me contacter</h4>
+      <p>À la recherche d'un stage PFE en génie mécanique, R&D, calcul CFD, amélioration continue ou QHSE.</p>
+      <p><i class="fa-solid fa-envelope"></i> <a href="mailto:Barkaoui.ahmed2003@gmail.com">Barkaoui.ahmed2003@gmail.com</a></p>
+      <p><i class="fa-solid fa-phone"></i> +216 21 286 746</p>
+      <p><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/barkaoui-ahmed-aero" target="_blank">Profil LinkedIn</a></p>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header class="header-bar">
+      <h1>Ahmed Barkaoui <span>· Portfolio en génie mécanique</span></h1>
+      <a href="https://www.linkedin.com/in/barkaoui-ahmed-aero" target="_blank" style="font-size: 1.5rem; color: #0077b5;"><i class="fa-brands fa-linkedin"></i></a>
+    </header>
+
+    <h1 class="page-title">Mes Compétences & Certifications</h1>
+    <p class="page-subtitle">Panorama des outils d'ingénierie, logiciels de simulation, méthodes industrielles, certifications professionnelles et langues maîtrisées.</p>
+
+    <!-- 1. CAO & Simulation -->
+    <div class="skills-section">
+      <h2><i class="fa-solid fa-laptop-code"></i> Conception (CAO) & Simulation numérique (CFD / FEA)</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h4>ANSYS Fluent</h4>
+          <p>Simulation aérodynamique, maillage complexe, écoulements fluides.</p>
+        </div>
+        <div class="skill-card">
+          <h4>CATIA V5</h4>
+          <p>Surfacique (Class A), assemblages aéronautiques, modélisation 3D.</p>
+        </div>
+        <div class="skill-card">
+          <h4>SOLIDWORKS</h4>
+          <p>Conception mécanique avancée, tôlerie, assemblages, simulation FEA.</p>
+        </div>
+        <div class="skill-card">
+          <h4>SpaceClaim</h4>
+          <p>Préparation de géométries pour calcul CFD et maillage.</p>
+        </div>
+        <div class="skill-card">
+          <h4>AutoCAD Mechanical</h4>
+          <p>Dessin technique 2D, cotation fonctionnelle et plans de fabrication.</p>
+        </div>
+        <div class="skill-card">
+          <h4>MATLAB / Simulink</h4>
+          <p>Calcul scientifique, modélisation de systèmes dynamiques, Python.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Méthodes & Qualité -->
+    <div class="skills-section">
+      <h2><i class="fa-solid fa-chart-line"></i> Méthodes industrielles, Qualité & ERP</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h4>Démarche DMAIC</h4>
+          <p>Analyse des causes racines, Ishikawa (5M), 5 Pourquoi, Pareto, QQOQCCP.</p>
+        </div>
+        <div class="skill-card">
+          <h4>SAP ERP & IFS Cloud</h4>
+          <p>Gestion des flux logistiques, codification de pièces, suivi de production.</p>
+        </div>
+        <div class="skill-card">
+          <h4>Normes ISO</h4>
+          <p>Systèmes de management de la qualité (ISO 9001) et environnemental (ISO 14001).</p>
+        </div>
+        <div class="skill-card">
+          <h4>Lean Manufacturing</h4>
+          <p>Analyse des temps de cycle, élimination des gaspillages (Muda), 5S, Kaizen.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Certifications -->
+    <div class="skills-section">
+      <h2><i class="fa-solid fa-certificate"></i> Certifications & Formations qualifiantes</h2>
+      <div class="cert-list">
+        <div class="cert-item">
+          <span class="cert-name"><i class="fa-solid fa-check-circle" style="color:#00205B;"></i> SOLIDWORKS Certified Associate & Professional (CSWA / CSWP)</span>
+          <span class="cert-issuer">Dassault Systèmes</span>
+        </div>
+        <div class="cert-item">
+          <span class="cert-name"><i class="fa-solid fa-check-circle" style="color:#00205B;"></i> Certification Six Sigma Yellow Belt</span>
+          <span class="cert-issuer">Qualité & Process</span>
+        </div>
+        <div class="cert-item">
+          <span class="cert-name"><i class="fa-solid fa-check-circle" style="color:#00205B;"></i> Navigabilité des Aéronefs & Flight Mechanics</span>
+          <span class="cert-issuer">ISAE-SUPAERO</span>
+        </div>
+        <div class="cert-item">
+          <span class="cert-name"><i class="fa-solid fa-check-circle" style="color:#00205B;"></i> 3D Transonic Flow Over a Wing & Structural Simulation</span>
+          <span class="cert-issuer">ANSYS Innovation</span>
+        </div>
+        <div class="cert-item">
+          <span class="cert-name"><i class="fa-solid fa-check-circle" style="color:#00205B;"></i> Formations aux Normes ISO 9001 & ISO 14001</span>
+          <span class="cert-issuer">Management de la Qualité</span>
+        </div>
+        <div class="cert-item">
+          <span class="cert-name"><i class="fa-solid fa-check-circle" style="color:#00205B;"></i> Industrial Safety Engineering & HSE</span>
+          <span class="cert-issuer">Khalifa University & L&T EduTech</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Langues -->
+    <div class="skills-section">
+      <h2><i class="fa-solid fa-language"></i> Langues</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h4>Arabe</h4>
+          <p>Langue maternelle</p>
+        </div>
+        <div class="skill-card">
+          <h4>Français</h4>
+          <p>Niveau C1 — Courant / Professionnel</p>
+        </div>
+        <div class="skill-card">
+          <h4>Anglais</h4>
+          <p>Niveau C1 — Courant / Professionnel</p>
+        </div>
+        <div class="skill-card">
+          <h4>Italien</h4>
+          <p>Niveau A1 — Débutant</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+</body>
+</html>
