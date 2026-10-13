@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expériences Professionnelles - Ahmed Barkaoui</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #00205B; /* Bleu Airbus */
+      --bg-sidebar: #f8f9fa;
+      --text-color: #2c3e50;
+      --text-muted: #7f8c8d;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; color: var(--text-color); background-color: #fff; }
+    
+    .sidebar { width: 280px; background-color: var(--bg-sidebar); height: 100vh; position: fixed; padding: 30px 20px; border-right: 1px solid #e9ecef; display: flex; flex-direction: column; overflow-y: auto; }
+    .sidebar h3 { font-size: 1.1rem; margin-bottom: 20px; text-transform: uppercase; border-bottom: 2px solid var(--primary-color); padding-bottom: 5px; color: var(--primary-color); display: inline-block; }
+    .nav-links { list-style: none; margin-bottom: 30px; }
+    .nav-links li { margin-bottom: 12px; }
+    .nav-links a { text-decoration: none; color: var(--text-color); font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 10px; }
+    .nav-links a:hover, .nav-links a.active { color: var(--primary-color); }
+
+    .contact-box { font-size: 0.85rem; color: var(--text-muted); margin-top: auto; padding-top: 20px; }
+    .contact-box h4 { color: var(--primary-color); margin-bottom: 10px; border-bottom: 2px solid var(--primary-color); padding-bottom: 3px; display: inline-block; }
+    .contact-box p { margin-bottom: 8px; line-height: 1.4; }
+    .contact-box a { color: var(--primary-color); text-decoration: none; word-break: break-all; }
+
+    .main-content { margin-left: 280px; padding: 50px; width: calc(100% - 280px); }
+    .header-bar { display: flex; justify-content: space-between; align-items: center; padding-bottom: 15px; border-bottom: 2px solid var(--primary-color); margin-bottom: 40px; }
+    .header-bar h1 { font-size: 1.4rem; color: var(--primary-color); }
+    .header-bar span { font-weight: normal; color: var(--text-muted); font-size: 1rem; }
+
+    .page-title { font-size: 2.2rem; color: var(--primary-color); margin-bottom: 10px; border-bottom: 3px solid var(--primary-color); padding-bottom: 5px; display: inline-block; }
+    .page-subtitle { color: var(--text-muted); font-size: 1rem; margin-bottom: 40px; }
+
+    /* Experience Card Layout */
+    .exp-list { display: flex; flex-direction: column; gap: 30px; margin-bottom: 50px; }
+    .exp-card {
+      border: 1px solid #e0e6ed;
+      border-left: 5px solid var(--primary-color);
+      border-radius: 6px;
+      padding: 30px;
+      background: #ffffff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+    .exp-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px; }
+    .exp-company { font-size: 1.4rem; color: var(--primary-color); font-weight: bold; }
+    .exp-role { font-size: 1.05rem; color: #e74c3c; font-weight: 600; margin-top: 4px; }
+    .exp-date {
+      background: #eef2f7;
+      color: var(--primary-color);
+      font-size: 0.85rem;
+      font-weight: bold;
+      padding: 6px 14px;
+      border-radius: 20px;
+    }
+    .exp-body ul { list-style-type: none; margin-bottom: 20px; }
+    .exp-body li {
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.6;
+    }
+    .exp-body li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: var(--primary-color);
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
+    .tag { background: #f0f4f8; color: var(--primary-color); font-size: 0.8rem; font-weight: 600; padding: 4px 12px; border-radius: 15px; border: 1px solid #d0d7de; }
+
+    @media (max-width: 900px) {
+      body { flex-direction: column; }
+      .sidebar { width: 100%; height: auto; position: relative; }
+      .main-content { margin-left: 0; width: 100%; padding: 20px; }
+      .exp-header { flex-direction: column; gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h3>Menu</h3>
+    <ul class="nav-links">
+      <li><a href="index.html"><i class="fa-solid fa-house"></i> ACCUEIL</a></li>
+      <li><a href="Education.html"><i class="fa-solid fa-graduation-cap"></i> FORMATION</a></li>
+      <li><a href="Experience.html" class="active"><i class="fa-solid fa-briefcase"></i> EXPÉRIENCES</a></li>
+      <li><a href="Projects.html"><i class="fa-solid fa-diagram-project"></i> PROJETS</a></li>
+      <li><a href="Skills.html"><i class="fa-solid fa-gears"></i> COMPÉTENCES</a></li>
+    </ul>
+
+    <div class="contact-box">
+      <h4>Me contacter</h4>
+      <p>À la recherche d'un stage PFE en génie mécanique, R&D, calcul CFD, amélioration continue ou QHSE.</p>
+      <p><i class="fa-solid fa-envelope"></i> <a href="mailto:Barkaoui.ahmed2003@gmail.com">Barkaoui.ahmed2003@gmail.com</a></p>
+      <p><i class="fa-solid fa-phone"></i> +216 21 286 746</p>
+      <p><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/barkaoui-ahmed-aero" target="_blank">Profil LinkedIn</a></p>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header class="header-bar">
+      <h1>Ahmed Barkaoui <span>· Portfolio en génie mécanique</span></h1>
+      <a href="https://www.linkedin.com/in/barkaoui-ahmed-aero" target="_blank" style="font-size: 1.5rem; color: #0077b5;"><i class="fa-brands fa-linkedin"></i></a>
+    </header>
+
+    <h1 class="page-title">Expériences professionnelles</h1>
+    <p class="page-subtitle">Immersions approfondies en milieu industriel aéronautique (Qualité, Méthodes, Logistique) et engagements en leadership technique.</p>
+
+    <div class="exp-list">
+
+      <!-- Experience 1 -->
+      <div class="exp-card">
+        <div class="exp-header">
+          <div>
+            <div class="exp-company">FIGEAC AÉRO Tunisie</div>
+            <div class="exp-role">Stagiaire Ingénieur – Département Assurance Qualité</div>
+          </div>
+          <div class="exp-date">Juil. 2026 — Sept. 2026</div>
+        </div>
+        <div class="exp-body">
+          <ul>
+            <li><strong>Analyse approfondie de la non-qualité :</strong> Étude systématique des causes racines des rebuts et défauts sur la ligne de production de pièces aéronautiques métalliques.</li>
+            <li><strong>Déploiement de la démarche DMAIC :</strong> Application rigoureuse des outils de résolution de problèmes (Diagramme d'Ishikawa, 5 Pourquoi, QQOQCCP, Pareto).</li>
+            <li><strong>Optimisation des procédés :</strong> Proposition et suivi d'un plan d'actions d'amélioration continue visant la réduction directe des coûts de non-qualité.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">DMAIC</span>
+            <span class="tag">Ishikawa</span>
+            <span class="tag">Gestion de la Qualité</span>
+            <span class="tag">Pareto</span>
+            <span class="tag">Amélioration Continue</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience 2 -->
+      <div class="exp-card">
+        <div class="exp-header">
+          <div>
+            <div class="exp-company">AIRBUS ATLANTIC (Aerolia Tunisie)</div>
+            <div class="exp-role">Stagiaire Ingénieur – Département Méthodes & Logistique</div>
+          </div>
+          <div class="exp-date">Juin 2025 — Août 2025</div>
+        </div>
+        <div class="exp-body">
+          <ul>
+            <li><strong>Optimisation d'assemblage :</strong> Analyse des flux et réorganisation du système de codification et de gestion des pièces aéronautiques sous <strong>SAP ERP</strong>.</li>
+            <li><strong>Gain de productivité :</strong> Contribution majeure à la réorganisation de la ligne d'assemblage, permettant une <strong>réduction de 25 % du temps de cycle</strong> sur la phase étudiée (Traverse T24 à T35).</li>
+            <li><strong>Suivi technique :</strong> Élaboration de fiches d'instructions et optimisation des gammes de fabrication pour le secteur aérostructure.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">SAP ERP</span>
+            <span class="tag">Méthodes & Assemblage</span>
+            <span class="tag">Lean Manufacturing</span>
+            <span class="tag">Gain de temps (-25%)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience 3 (Associatif & Leadership) -->
+      <div class="exp-card">
+        <div class="exp-header">
+          <div>
+            <div class="exp-company">ENIGROBOTS & Clubs Techniques (ENIG)</div>
+            <div class="exp-role">Responsable Technique & Chef de Projet Robotique</div>
+          </div>
+          <div class="exp-date">Juin 2024 — En cours</div>
+        </div>
+        <div class="exp-body">
+          <ul>
+            <li><strong>Leadership d'équipe :</strong> Management d'une équipe technique de 35 personnes pour la conception et fabrication du robot de combat <em>Deathring</em>.</li>
+            <li><strong>Présidence de Club :</strong> Organisation de workshops pratiques et formations techniques en CAO (SolidWorks, CATIA) au sein du club <em>Alliance of Engineers</em>.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Management d'équipe (35 pers.)</span>
+            <span class="tag">Gestion de projet</span>
+            <span class="tag">Conception CAO</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>
