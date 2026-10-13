@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ma formation - Ahmed Barkaoui</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #00205B; /* Bleu Airbus */
+      --bg-sidebar: #f8f9fa;
+      --text-color: #2c3e50;
+      --text-muted: #7f8c8d;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; color: var(--text-color); background-color: #fff; }
+    
+    .sidebar { width: 280px; background-color: var(--bg-sidebar); height: 100vh; position: fixed; padding: 30px 20px; border-right: 1px solid #e9ecef; display: flex; flex-direction: column; overflow-y: auto; }
+    .sidebar h3 { font-size: 1.1rem; margin-bottom: 20px; text-transform: uppercase; border-bottom: 2px solid var(--primary-color); padding-bottom: 5px; color: var(--primary-color); display: inline-block; }
+    .nav-links { list-style: none; margin-bottom: 30px; }
+    .nav-links li { margin-bottom: 12px; }
+    .nav-links a { text-decoration: none; color: var(--text-color); font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 10px; }
+    .nav-links a:hover, .nav-links a.active { color: var(--primary-color); }
+
+    .contact-box { font-size: 0.85rem; color: var(--text-muted); margin-top: auto; padding-top: 20px; }
+    .contact-box h4 { color: var(--primary-color); margin-bottom: 10px; border-bottom: 2px solid var(--primary-color); padding-bottom: 3px; display: inline-block; }
+    .contact-box p { margin-bottom: 8px; line-height: 1.4; }
+    .contact-box a { color: var(--primary-color); text-decoration: none; word-break: break-all; }
+
+    .main-content { margin-left: 280px; padding: 50px; width: calc(100% - 280px); }
+    .header-bar { display: flex; justify-content: space-between; align-items: center; padding-bottom: 15px; border-bottom: 2px solid var(--primary-color); margin-bottom: 40px; }
+    .header-bar h1 { font-size: 1.4rem; color: var(--primary-color); }
+    .header-bar span { font-weight: normal; color: var(--text-muted); font-size: 1rem; }
+
+    .page-title { font-size: 2.2rem; color: var(--primary-color); margin-bottom: 10px; border-bottom: 3px solid var(--primary-color); padding-bottom: 5px; display: inline-block; }
+    .page-subtitle { color: var(--text-muted); font-size: 1rem; margin-bottom: 40px; }
+
+    /* Timeline Formation */
+    .timeline { position: relative; padding-left: 30px; border-left: 2px solid #e0e6ed; margin-bottom: 50px; }
+    .timeline-item { position: relative; margin-bottom: 35px; }
+    .timeline-item::before { content: ''; position: absolute; left: -37px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: var(--primary-color); border: 2px solid #fff; }
+    .timeline-title { font-size: 1.2rem; color: var(--primary-color); font-weight: bold; }
+    .timeline-school { font-size: 0.95rem; color: #e74c3c; font-weight: 600; margin-bottom: 5px; }
+    .timeline-date { font-size: 0.85rem; color: var(--text-muted); font-weight: 600; margin-bottom: 10px; }
+    .timeline-desc { font-size: 0.95rem; color: #555; line-height: 1.5; margin-bottom: 15px; }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { background: #f0f4f8; color: var(--primary-color); font-size: 0.8rem; font-weight: 600; padding: 4px 12px; border-radius: 15px; border: 1px solid #d0d7de; }
+
+    @media (max-width: 900px) {
+      body { flex-direction: column; }
+      .sidebar { width: 100%; height: auto; position: relative; }
+      .main-content { margin-left: 0; width: 100%; padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <aside class="sidebar">
+    <h3>Menu</h3>
+    <ul class="nav-links">
+      <li><a href="index.html"><i class="fa-solid fa-house"></i> ACCUEIL</a></li>
+      <li><a href="Education.html" class="active"><i class="fa-solid fa-graduation-cap"></i> FORMATION</a></li>
+      <li><a href="Experience.html"><i class="fa-solid fa-briefcase"></i> EXPÉRIENCES</a></li>
+      <li><a href="Projects.html"><i class="fa-solid fa-diagram-project"></i> PROJETS</a></li>
+      <li><a href="Skills.html"><i class="fa-solid fa-gears"></i> COMPÉTENCES</a></li>
+    </ul>
+
+    <div class="contact-box">
+      <h4>Me contacter</h4>
+      <p>À la recherche d'un stage PFE en génie mécanique, R&D, calcul CFD, amélioration continue ou QHSE.</p>
+      <p><i class="fa-solid fa-envelope"></i> <a href="mailto:Barkaoui.ahmed2003@gmail.com">Barkaoui.ahmed2003@gmail.com</a></p>
+      <p><i class="fa-solid fa-phone"></i> +216 21 286 746</p>
+      <p><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/barkaoui-ahmed-aero" target="_blank">Profil LinkedIn</a></p>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="header-bar">
+      <h1>Ahmed Barkaoui <span>· Portfolio en génie mécanique</span></h1>
+      <a href="https://www.linkedin.com/in/barkaoui-ahmed-aero" target="_blank" style="font-size: 1.5rem; color: #0077b5;"><i class="fa-brands fa-linkedin"></i></a>
+    </header>
+
+    <h1 class="page-title">Ma formation</h1>
+    <p class="page-subtitle">Un parcours scientifique et technique construit du baccalauréat technique jusqu'au diplôme d'ingénieur en génie mécanique, spécialisé en industriel et aéronautique.</p>
+
+    <div class="timeline">
+
+      <!-- Formation 1 -->
+      <div class="timeline-item">
+        <div class="timeline-title">Diplôme national d'ingénieur en génie mécanique</div>
+        <div class="timeline-school">École Nationale d'Ingénieurs de Gabès (ENIG)</div>
+        <div class="timeline-date">Sept. 2024 — En cours</div>
+        <p class="timeline-desc">Spécialisation en génie industriel et aéronautique. Formation axée sur la conception mécanique avancée, la simulation numérique CFD, les méthodes de fabrication et l'optimisation des procédés industriels.</p>
+        <div class="tags">
+          <span class="tag">Conception mécanique</span>
+          <span class="tag">Simulation CFD</span>
+          <span class="tag">Aérodynamique</span>
+          <span class="tag">Lean Manufacturing</span>
+          <span class="tag">Gestion de production</span>
+        </div>
+      </div>
+
+      <!-- Formation 2 -->
+      <div class="timeline-item">
+        <div class="timeline-title">Cycle préparatoire aux études d'ingénieurs — Physique-Technologie (PT)</div>
+        <div class="timeline-school">Institut Préparatoire aux Études d'Ingénieurs El Manar (EPEIEM)</div>
+        <div class="timeline-date">Sept. 2022 — Juil. 2024</div>
+        <p class="timeline-desc">Cycle scientifique intensif préparant aux concours nationaux d'entrée aux écoles d'ingénieurs. Solide formation en mécanique des solides et des fluides, thermodynamique, sciences de l'ingénieur et mathématiques appliquées.</p>
+        <div class="tags">
+          <span class="tag">Mécanique du solide</span>
+          <span class="tag">Thermodynamique</span>
+          <span class="tag">Physique</span>
+          <span class="tag">Mathématiques appliquées</span>
+        </div>
+      </div>
+
+      <!-- Formation 3 -->
+      <div class="timeline-item">
+        <div class="timeline-title">Baccalauréat Technique</div>
+        <div class="timeline-school">Lycée Technique</div>
+        <div class="timeline-date">Sept. 2021 — Juil. 2022</div>
+        <p class="timeline-desc">Obtention du baccalauréat spécialité Technique avec mention Bien (15,16 / 20).</p>
+        <div class="tags">
+          <span class="tag">Sciences techniques</span>
+          <span class="tag">Génie mécanique</span>
+          <span class="tag">Génie électrique</span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>
