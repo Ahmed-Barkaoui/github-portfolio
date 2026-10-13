@@ -7,11 +7,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
-      --primary-color: #00205B; /* Bleu officiel Airbus */
-      --primary-hover: #00143a;
+      --primary-color: #00205B;
       --bg-sidebar: #f8f9fa;
-      --text-color: #1a252c;
-      --text-muted: #6c757d;
+      --text-color: #2c3e50;
+      --text-muted: #7f8c8d;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -38,10 +37,9 @@
       margin-bottom: 20px;
       text-transform: uppercase;
       letter-spacing: 1px;
-      border-bottom: 3px solid var(--primary-color);
+      border-bottom: 2px solid var(--primary-color);
       padding-bottom: 5px;
       display: inline-block;
-      color: var(--primary-color);
     }
     .nav-links { list-style: none; margin-bottom: 30px; }
     .nav-links li { margin-bottom: 12px; }
@@ -59,7 +57,7 @@
 
     .contact-box { font-size: 0.85rem; color: var(--text-muted); margin-top: auto; padding-top: 20px; }
     .contact-box h4 {
-      color: var(--primary-color);
+      color: var(--text-color);
       margin-bottom: 10px;
       border-bottom: 2px solid var(--primary-color);
       padding-bottom: 3px;
@@ -80,10 +78,10 @@
       justify-content: space-between;
       align-items: center;
       padding-bottom: 15px;
-      border-bottom: 3px solid var(--primary-color);
+      border-bottom: 2px solid var(--primary-color);
       margin-bottom: 40px;
     }
-    .header-bar h1 { font-size: 1.4rem; color: var(--primary-color); }
+    .header-bar h1 { font-size: 1.4rem; }
     .header-bar span { font-weight: normal; color: var(--text-muted); font-size: 1rem; }
     .linkedin-icon { font-size: 1.5rem; color: #0077b5; text-decoration: none; }
 
@@ -99,7 +97,7 @@
       font-size: 2.5rem;
       line-height: 1.2;
       margin-bottom: 15px;
-      color: var(--primary-color);
+      color: #1a1a1a;
     }
     .hero-text .subtitle {
       font-size: 0.95rem;
@@ -110,10 +108,10 @@
     .hero-text p {
       font-size: 0.95rem;
       line-height: 1.6;
-      color: #444;
+      color: #555;
       margin-bottom: 25px;
     }
-    .highlight { font-weight: bold; color: var(--primary-color); }
+    .highlight { font-weight: bold; color: var(--text-color); }
 
     .btn-group { display: flex; gap: 15px; }
     .btn {
@@ -135,15 +133,15 @@
       max-height: 480px;
       border-radius: 4px;
       object-fit: cover;
-      box-shadow: 0 4px 15px rgba(0,32,91,0.15);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
 
     /* Sections */
     .section-title {
       font-size: 1.8rem;
-      color: var(--primary-color);
+      color: #2c3e50;
       margin-bottom: 20px;
-      border-bottom: 3px solid var(--primary-color);
+      border-bottom: 2px solid var(--primary-color);
       padding-bottom: 8px;
       display: inline-block;
     }
@@ -165,24 +163,19 @@
     }
     .card-item {
       background: #fdfdfd;
-      border: 1px solid #e0e6ed;
+      border: 1px solid #eaeaea;
       padding: 25px;
       border-radius: 6px;
       position: relative;
       display: flex;
       flex-direction: column;
       gap: 15px;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .card-item:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 12px rgba(0, 32, 91, 0.08);
     }
     .card-item i {
       font-size: 2rem;
       color: var(--primary-color);
     }
-    .card-item h3 { font-size: 1.2rem; color: var(--primary-color); }
+    .card-item h3 { font-size: 1.2rem; color: #2c3e50; }
     .card-item p { font-size: 0.95rem; color: #555; line-height: 1.5; }
 
     .footer-note {
@@ -210,3 +203,31 @@
     <h3>Menu</h3>
     <ul class="nav-links">
       <li><a href="#accueil"><i class="fa-solid fa-house"></i> ACCUEIL</a></li>
+      <li><a href="#apropos"><i class="fa-solid fa-user"></i> À PROPOS</a></li>
+      <li><a href="#formation"><i class="fa-solid fa-graduation-cap"></i> FORMATION</a></li>
+      <li><a href="#experiences"><i class="fa-solid fa-briefcase"></i> EXPÉRIENCES</a></li>
+      <li><a href="#projets"><i class="fa-solid fa-diagram-project"></i> PROJETS</a></li>
+      <li><a href="#competences"><i class="fa-solid fa-gears"></i> COMPÉTENCES</a></li>
+    </ul>
+
+    <div class="contact-box">
+      <h4>Me contacter</h4>
+      <p>À la recherche d'un stage PFE en génie mécanique, R&D et calcul CFD.</p>
+      <p><i class="fa-solid fa-envelope"></i> <a href="mailto:votre-email@example.com">votre-email@example.com</a></p>
+      <p><i class="fa-solid fa-phone"></i> +216 XX XXX XXX</p>
+      <p><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com" target="_blank">Profil LinkedIn</a></p>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header class="header-bar">
+      <h1>Ahmed Barkaoui <span>· Portfolio en génie mécanique</span></h1>
+      <a href="https://linkedin.com" target="_blank" class="linkedin-icon"><i class="fa-brands fa-linkedin"></i></a>
+    </header>
+
+    <!-- Accueil Hero Section -->
+    <section id="accueil" class="hero">
+      <div class="hero-text">
+        <h2>Bonjour, je suis Ahmed Barkaoui<br>Élève ingénieur en génie mécanique</h2>
+        <p class="subtitle">
