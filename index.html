@@ -7,10 +7,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
-      --primary-color: #e74c3c;
+      --primary-color: #00205B; /* Bleu officiel Airbus */
+      --primary-hover: #00143a;
       --bg-sidebar: #f8f9fa;
-      --text-color: #2c3e50;
-      --text-muted: #7f8c8d;
+      --text-color: #1a252c;
+      --text-muted: #6c757d;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -37,9 +38,10 @@
       margin-bottom: 20px;
       text-transform: uppercase;
       letter-spacing: 1px;
-      border-bottom: 2px solid var(--primary-color);
+      border-bottom: 3px solid var(--primary-color);
       padding-bottom: 5px;
       display: inline-block;
+      color: var(--primary-color);
     }
     .nav-links { list-style: none; margin-bottom: 30px; }
     .nav-links li { margin-bottom: 12px; }
@@ -57,7 +59,7 @@
 
     .contact-box { font-size: 0.85rem; color: var(--text-muted); margin-top: auto; padding-top: 20px; }
     .contact-box h4 {
-      color: var(--text-color);
+      color: var(--primary-color);
       margin-bottom: 10px;
       border-bottom: 2px solid var(--primary-color);
       padding-bottom: 3px;
@@ -78,10 +80,10 @@
       justify-content: space-between;
       align-items: center;
       padding-bottom: 15px;
-      border-bottom: 2px solid var(--primary-color);
+      border-bottom: 3px solid var(--primary-color);
       margin-bottom: 40px;
     }
-    .header-bar h1 { font-size: 1.4rem; }
+    .header-bar h1 { font-size: 1.4rem; color: var(--primary-color); }
     .header-bar span { font-weight: normal; color: var(--text-muted); font-size: 1rem; }
     .linkedin-icon { font-size: 1.5rem; color: #0077b5; text-decoration: none; }
 
@@ -97,7 +99,7 @@
       font-size: 2.5rem;
       line-height: 1.2;
       margin-bottom: 15px;
-      color: #1a1a1a;
+      color: var(--primary-color);
     }
     .hero-text .subtitle {
       font-size: 0.95rem;
@@ -108,10 +110,10 @@
     .hero-text p {
       font-size: 0.95rem;
       line-height: 1.6;
-      color: #555;
+      color: #444;
       margin-bottom: 25px;
     }
-    .highlight { font-weight: bold; color: var(--text-color); }
+    .highlight { font-weight: bold; color: var(--primary-color); }
 
     .btn-group { display: flex; gap: 15px; }
     .btn {
@@ -133,15 +135,15 @@
       max-height: 480px;
       border-radius: 4px;
       object-fit: cover;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 15px rgba(0,32,91,0.15);
     }
 
     /* Sections */
     .section-title {
       font-size: 1.8rem;
-      color: #2c3e50;
+      color: var(--primary-color);
       margin-bottom: 20px;
-      border-bottom: 2px solid var(--primary-color);
+      border-bottom: 3px solid var(--primary-color);
       padding-bottom: 8px;
       display: inline-block;
     }
@@ -163,19 +165,24 @@
     }
     .card-item {
       background: #fdfdfd;
-      border: 1px solid #eaeaea;
+      border: 1px solid #e0e6ed;
       padding: 25px;
       border-radius: 6px;
       position: relative;
       display: flex;
       flex-direction: column;
       gap: 15px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0, 32, 91, 0.08);
     }
     .card-item i {
       font-size: 2rem;
       color: var(--primary-color);
     }
-    .card-item h3 { font-size: 1.2rem; color: #2c3e50; }
+    .card-item h3 { font-size: 1.2rem; color: var(--primary-color); }
     .card-item p { font-size: 0.95rem; color: #555; line-height: 1.5; }
 
     .footer-note {
@@ -203,118 +210,3 @@
     <h3>Menu</h3>
     <ul class="nav-links">
       <li><a href="#accueil"><i class="fa-solid fa-house"></i> ACCUEIL</a></li>
-      <li><a href="#apropos"><i class="fa-solid fa-user"></i> À PROPOS</a></li>
-      <li><a href="#formation"><i class="fa-solid fa-graduation-cap"></i> FORMATION</a></li>
-      <li><a href="#experiences"><i class="fa-solid fa-briefcase"></i> EXPÉRIENCES</a></li>
-      <li><a href="#projets"><i class="fa-solid fa-diagram-project"></i> PROJETS</a></li>
-      <li><a href="#competences"><i class="fa-solid fa-gears"></i> COMPÉTENCES</a></li>
-    </ul>
-
-    <div class="contact-box">
-      <h4>Me contacter</h4>
-      <p>À la recherche d'un stage PFE en génie mécanique, R&D et calcul CFD.</p>
-      <p><i class="fa-solid fa-envelope"></i> <a href="mailto:votre-email@example.com">votre-email@example.com</a></p>
-      <p><i class="fa-solid fa-phone"></i> +216 XX XXX XXX</p>
-      <p><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com" target="_blank">Profil LinkedIn</a></p>
-    </div>
-  </aside>
-
-  <!-- Main Content -->
-  <main class="main-content">
-    <header class="header-bar">
-      <h1>Ahmed Barkaoui <span>· Portfolio en génie mécanique</span></h1>
-      <a href="https://linkedin.com" target="_blank" class="linkedin-icon"><i class="fa-brands fa-linkedin"></i></a>
-    </header>
-
-    <!-- Accueil Hero Section -->
-    <section id="accueil" class="hero">
-      <div class="hero-text">
-        <h2>Bonjour, je suis Ahmed Barkaoui<br>Élève ingénieur en génie mécanique</h2>
-        <p class="subtitle">ENIG · GABÈS, TUNISIE</p>
-
-        <p>Passionné par la <span class="highlight">conception mécanique</span>, l'aérodynamique, la <span class="highlight">simulation CFD</span> (ANSYS Fluent, SimScale) et le calcul de structures. Je recherche un projet de fin d'études (PFE) ou une opportunité professionnelle en R&D, bureau d'études ou calcul aéronautique.</p>
-
-        <div class="btn-group">
-          <a href="#" class="btn"><i class="fa-regular fa-file-pdf"></i> OUVRIR MON CV</a>
-          <a href="#projets" class="btn">VOIR MES PROJETS</a>
-        </div>
-      </div>
-
-      <div class="profile-img">
-        <!-- Remplacement par votre image téléversée sous le nom profil.jpg -->
-        <img src="profil.jpg" alt="Ahmed Barkaoui">
-      </div>
-    </section>
-
-    <hr class="section-divider">
-
-    <!-- À Propos -->
-    <section id="apropos">
-      <h2 class="section-title">À propos de moi</h2>
-      <p class="about-text">
-        Élève ingénieur en dernière année à l'École Nationale d'Ingénieurs de Gabès (ENIG), je développe une spécialisation pointue en conception mécanique, aérodynamique et simulation numérique. Fort de mes expériences en milieu industriel (Airbus, Figeac Aéro) et de mon leadership associatif (ENIGROBOTS), je cherche à mettre mes compétences en calcul et en optimisation au service de projets innovants en Europe et à l'international.
-      </p>
-
-      <div class="grid-cards">
-        <div class="card-item">
-          <i class="fa-solid fa-location-dot"></i>
-          <h3>Localisation</h3>
-          <p>Gabès / Tunis, Tunisie</p>
-        </div>
-        <div class="card-item">
-          <i class="fa-solid fa-language"></i>
-          <h3>Langues</h3>
-          <p>Arabe (Maternel)<br>Français & Anglais (Professionnel)</p>
-        </div>
-        <div class="card-item" id="formation">
-          <i class="fa-solid fa-graduation-cap"></i>
-          <h3>Formation actuelle</h3>
-          <p>Diplôme national d'ingénieur en génie mécanique<br>ENIG (Dernière année)</p>
-        </div>
-        <div class="card-item" id="recherche">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <h3>Recherche</h3>
-          <p>Stage de fin d'études (PFE) de 6 mois en R&D, simulation CAE, CFD et conception aéronautique.</p>
-        </div>
-      </div>
-    </section>
-
-    <hr class="section-divider">
-
-    <!-- Explorer / Sections détaillées -->
-    <h2 class="section-title">Explorer mon portfolio</h2>
-    <div class="grid-cards" style="margin-top: 20px;">
-      
-      <div class="card-item" id="experiences">
-        <i class="fa-solid fa-briefcase"></i>
-        <h3>Expériences</h3>
-        <p>Stages industriels en méthodes de fabrication, optimisation de lignes d'assemblage (Airbus) et gestion de la qualité / analyse DMAIC (Figeac Aéro).</p>
-      </div>
-
-      <div class="card-item" id="projets">
-        <i class="fa-solid fa-diagram-project"></i>
-        <h3>Projets</h3>
-        <p>Projet de fin d'études (PFA) sur l'aérodynamique des winglets (Airbus A320neo) et conception de robots de combat (Deathring - ENIGROBOTS).</p>
-      </div>
-
-      <div class="card-item" id="competences">
-        <i class="fa-solid fa-gears"></i>
-        <h3>Compétences</h3>
-        <p>ANSYS Fluent, SolidWorks, CATIA V5, SimScale, MATLAB, AutoCAD Mechanical, Six Sigma & ISO 14001.</p>
-      </div>
-
-      <div class="card-item">
-        <i class="fa-solid fa-circle-check"></i>
-        <h3>Certifications & Qualité</h3>
-        <p>Formations spécialisées en management de la qualité, démarches Six Sigma (Yellow/White Belt) et normes environnementales.</p>
-      </div>
-
-    </div>
-
-    <div class="footer-note">
-      <p>© 2026. Tous droits réservés. Réalisé par Ahmed Barkaoui.</p>
-    </div>
-  </main>
-
-</body>
-</html>
