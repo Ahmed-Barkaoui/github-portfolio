@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmed Barkaoui - Portfolio Génie Mécanique</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #e74c3c;
+      --bg-sidebar: #f8f9fa;
+      --text-color: #2c3e50;
+      --text-muted: #7f8c8d;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      color: var(--text-color);
+      background-color: #fff;
+    }
+    
+    /* Sidebar Layout */
+    .sidebar {
+      width: 260px;
+      background-color: var(--bg-sidebar);
+      height: 100vh;
+      position: fixed;
+      padding: 30px 20px;
+      border-right: 1px solid #e9ecef;
+      display: flex;
+      flex-direction: column;
+    }
+    .sidebar h3 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 2px solid var(--primary-color);
+      padding-bottom: 5px;
+      display: inline-block;
+    }
+    .nav-links { list-style: none; margin-bottom: 40px; }
+    .nav-links li { margin-bottom: 15px; }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover { color: var(--primary-color); }
+
+    /* Contact Block in Sidebar */
+    .contact-box { font-size: 0.85rem; color: var(--text-muted); }
+    .contact-box h4 {
+      color: var(--text-color);
+      margin-bottom: 10px;
+      border-bottom: 2px solid var(--primary-color);
+      padding-bottom: 3px;
+      display: inline-block;
+    }
+    .contact-box p { margin-bottom: 8px; line-height: 1.4; }
+
+    /* Main Content */
+    .main-content {
+      margin-left: 260px;
+      padding: 50px;
+      width: calc(100% - 260px);
+    }
+    .header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 15px;
+      border-bottom: 2px solid var(--primary-color);
+      margin-bottom: 40px;
+    }
+    .header-bar h1 { font-size: 1.5rem; }
+    .header-bar span { font-weight: normal; color: var(--text-muted); font-size: 1.1rem; }
+    .linkedin-icon { font-size: 1.5rem; color: #0077b5; text-decoration: none; }
+
+    /* Hero Section */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 40px;
+      align-items: start;
+    }
+    .hero-text h2 {
+      font-size: 2.8rem;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: #1a1a1a;
+    }
+    .hero-text .subtitle {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+    .hero-text p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #555;
+      margin-bottom: 30px;
+    }
+    .highlight { font-weight: bold; color: var(--text-color); }
+
+    .btn-group { display: flex; gap: 15px; }
+    .btn {
+      padding: 12px 24px;
+      border: 2px solid var(--primary-color);
+      background: transparent;
+      color: var(--primary-color);
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      transition: all 0.3s;
+      text-align: center;
+    }
+    .btn:hover {
+      background: var(--primary-color);
+      color: #fff;
+    }
+
+    .profile-img img {
+      width: 100%;
+      border-radius: 4px;
+      object-fit: cover;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 900px) {
+      body { flex-direction: column; }
+      .sidebar { width: 100%; height: auto; position: relative; }
+      .main-content { margin-left: 0; width: 100%; padding: 20px; }
+      .hero { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h3>Menu</h3>
+    <ul class="nav-links">
+      <li><a href="#accueil"><i class="fa-solid fa-house"></i> ACCUEIL</a></li>
+      <li><a href="#formation"><i class="fa-solid fa-graduation-cap"></i> FORMATION</a></li>
+      <li><a href="#experiences"><i class="fa-solid fa-briefcase"></i> EXPÉRIENCES</a></li>
+      <li><a href="#projets"><i class="fa-solid fa-diagram-project"></i> PROJETS</a></li>
+      <li><a href="#competences"><i class="fa-solid fa-gears"></i> COMPÉTENCES</a></li>
+    </ul>
+
+    <div class="contact-box">
+      <h4>Me contacter</h4>
+      <p>Je suis à la recherche d'une opportunité / stage de fin d'études en Génie Mécanique, R&D, CFD et conception.</p>
+      <p><i class="fa-solid fa-envelope"></i> votre-email@example.com</p>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header class="header-bar">
+      <h1>Ahmed Barkaoui <span>· Portfolio en génie mécanique</span></h1>
+      <a href="https://linkedin.com" target="_blank" class="linkedin-icon"><i class="fa-brands fa-linkedin"></i></a>
+    </header>
+
+    <section id="accueil" class="hero">
+      <div class="hero-text">
+        <h2>Bonjour, je suis Ahmed Barkaoui<br>Élève ingénieur en génie mécanique</h2>
+        <p class="subtitle">ENIG · GABÈS, TUNISIE</p>
+
+        <p>Passionné par la <span class="highlight">conception mécanique</span>, l'Aérodynamique, la <span class="highlight">simulation CFD</span> (ANSYS Fluent, SimScale) et le calcul de structures. Je recherche un projet de fin d'études (PFE) ou une opportunité professionnelle en R&D, bureau d'études ou calcul aéronautique.</p>
+
+        <div class="btn-group">
+          <a href="#" class="btn"><i class="fa-regular fa-file-pdf"></i> OUVRIR MON CV</a>
+          <a href="#projets" class="btn">VOIR MES PROJETS</a>
+        </div>
+      </div>
+
+      <div class="profile-img">
+        <!-- Remplacez l'image par votre propre photo -->
+        <img src="https://via.placeholder.com/400x500" alt="Ahmed Barkaoui">
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
