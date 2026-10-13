@@ -22,21 +22,41 @@
     .nav-links a { text-decoration: none; color: var(--text-color); font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 10px; }
     .nav-links a:hover, .nav-links a.active { color: var(--primary-color); }
 
+    .contact-box { font-size: 0.85rem; color: var(--text-muted); margin-top: auto; padding-top: 20px; }
+    .contact-box h4 { color: var(--primary-color); margin-bottom: 10px; border-bottom: 2px solid var(--primary-color); padding-bottom: 3px; display: inline-block; }
+    .contact-box p { margin-bottom: 8px; line-height: 1.4; }
+    .contact-box a { color: var(--primary-color); text-decoration: none; word-break: break-all; }
+
     .main-content { margin-left: 280px; padding: 50px; width: calc(100% - 280px); }
+    .header-bar { display: flex; justify-content: space-between; align-items: center; padding-bottom: 15px; border-bottom: 2px solid var(--primary-color); margin-bottom: 40px; }
+    .header-bar h1 { font-size: 1.4rem; color: var(--primary-color); }
+    .header-bar span { font-weight: normal; color: var(--text-muted); font-size: 1rem; }
+
     .page-title { font-size: 2.2rem; color: var(--primary-color); margin-bottom: 10px; border-bottom: 3px solid var(--primary-color); padding-bottom: 5px; display: inline-block; }
     .page-subtitle { color: var(--text-muted); font-size: 1rem; margin-bottom: 40px; }
 
-    .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; }
-    .project-card { border: 1px solid #e0e6ed; border-top: 4px solid var(--primary-color); border-radius: 8px; padding: 25px; background: #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between; }
-    .project-card h3 { font-size: 1.2rem; color: var(--primary-color); margin-bottom: 8px; }
-    .project-meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px; font-weight: 600; }
-    .project-desc { font-size: 0.95rem; color: #555; line-height: 1.5; margin-bottom: 20px; }
+    /* Projects Grid */
+    .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; margin-bottom: 50px; }
+    .project-card {
+      border: 1px solid #e0e6ed;
+      border-top: 4px solid var(--primary-color);
+      border-radius: 8px;
+      padding: 25px;
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .project-card h3 { font-size: 1.15rem; color: var(--primary-color); margin-bottom: 8px; }
+    .project-meta { font-size: 0.85rem; color: #e74c3c; font-weight: 600; margin-bottom: 12px; }
+    .project-desc { font-size: 0.93rem; color: #555; line-height: 1.6; margin-bottom: 20px; }
     
-    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
-    .tag { background: #eef2f7; color: var(--primary-color); font-size: 0.75rem; font-weight: bold; padding: 4px 10px; border-radius: 12px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+    .tag { background: #f0f4f8; color: var(--primary-color); font-size: 0.75rem; font-weight: bold; padding: 4px 10px; border-radius: 12px; border: 1px solid #d0d7de; }
 
     .card-actions { display: flex; gap: 10px; }
-    .btn-card { padding: 8px 15px; border-radius: 4px; font-size: 0.85rem; font-weight: bold; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+    .btn-card { padding: 8px 15px; border-radius: 4px; font-size: 0.83rem; font-weight: bold; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
     .btn-dark { background: #2c3e50; color: #fff; }
     .btn-dark:hover { background: var(--primary-color); }
     .btn-outline { border: 1px solid var(--primary-color); color: var(--primary-color); }
@@ -52,6 +72,7 @@
 </head>
 <body>
 
+  <!-- Sidebar -->
   <aside class="sidebar">
     <h3>Menu</h3>
     <ul class="nav-links">
@@ -61,81 +82,132 @@
       <li><a href="Projects.html" class="active"><i class="fa-solid fa-diagram-project"></i> PROJETS</a></li>
       <li><a href="Skills.html"><i class="fa-solid fa-gears"></i> COMPÉTENCES</a></li>
     </ul>
+
+    <div class="contact-box">
+      <h4>Me contacter</h4>
+      <p>À la recherche d'un stage PFE en génie mécanique, R&D, calcul CFD, amélioration continue ou QHSE.</p>
+      <p><i class="fa-solid fa-envelope"></i> <a href="mailto:Barkaoui.ahmed2003@gmail.com">Barkaoui.ahmed2003@gmail.com</a></p>
+      <p><i class="fa-solid fa-phone"></i> +216 21 286 746</p>
+      <p><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/barkaoui-ahmed-aero" target="_blank">Profil LinkedIn</a></p>
+    </div>
   </aside>
 
+  <!-- Main Content -->
   <main class="main-content">
-    <h1 class="page-title">Mes projets</h1>
-    <p class="page-subtitle">Une sélection de projets en simulation numérique CFD, conception aéronautique, mécanique et robotique.</p>
+    <header class="header-bar">
+      <h1>Ahmed Barkaoui <span>· Portfolio en génie mécanique</span></h1>
+      <a href="https://www.linkedin.com/in/barkaoui-ahmed-aero" target="_blank" style="font-size: 1.5rem; color: #0077b5;"><i class="fa-brands fa-linkedin"></i></a>
+    </header>
+
+    <h1 class="page-title">Mes Projets Techniques</h1>
+    <p class="page-subtitle">Travaux approfondis en simulation numérique CFD, conception aéronautique avancée, modélisation de structures et robotique de compétition.</p>
 
     <div class="projects-grid">
 
       <!-- Projet 1 -->
       <div class="project-card">
         <div>
-          <h3>Étude CFD d'une aile d'Airbus A320neo</h3>
-          <p class="project-meta">Projet de Fin d'Année (PFA) · ANSYS Fluent</p>
-          <p class="project-desc">Modélisation tridimensionnelle et simulation aérodynamique sous ANSYS Fluent de l'aile de l'Airbus A320neo avec et sans sharklets. Analyse de la réduction de la traînée induite et évaluation du pourcentage d'économie de Kérosène.</p>
+          <h3>Étude CFD d'une aile d'Airbus A320neo (avec & sans sharklets)</h3>
+          <p class="project-meta">Projet de Fin d'Études (PFA) · ENIG</p>
+          <p class="project-desc">Modélisation tridimensionnelle et simulation aérodynamique sous ANSYS Fluent. Analyse comparative des champs de pression et de vitesse pour évaluer la réduction de la traînée induite et l'impact direct sur l'économie de kérosène.</p>
           <div class="tags">
-            <span class="tag">CFD</span>
             <span class="tag">ANSYS Fluent</span>
             <span class="tag">Aérodynamique</span>
-            <span class="tag">Sharklets</span>
+            <span class="tag">CFD</span>
+            <span class="tag">Airbus A320neo</span>
           </div>
         </div>
         <div class="card-actions">
-          <a href="#" class="btn-card btn-dark"><i class="fa-solid fa-file-pdf"></i> Voir le rapport PDF</a>
+          <a href="#" class="btn-card btn-dark"><i class="fa-solid fa-file-pdf"></i> Rapport PFA</a>
         </div>
       </div>
 
       <!-- Projet 2 -->
       <div class="project-card">
         <div>
-          <h3>Système de blocage des gouvernes au sol</h3>
-          <p class="project-meta">Conception mécanique · CATIA V5 / SolidWorks</p>
-          <p class="project-desc">Conception et dimensionnement d'un système mécanique permettant d'immobiliser et de bloquer en toute sécurité les surfaces de commande de vol des aéronefs lorsqu'ils sont au sol.</p>
+          <h3>Système de blocage des gouvernes de vol au sol</h3>
+          <p class="project-meta">Conception Aéronautique · CATIA V5 / SolidWorks</p>
+          <p class="project-desc">Étude cinématique et dimensionnement structurel d'un dispositif mécanique destiné à immobiliser et sécuriser les surfaces de contrôle de vol d'un aéronef contre les efforts de vent au sol.</p>
           <div class="tags">
             <span class="tag">CATIA V5</span>
             <span class="tag">SolidWorks</span>
-            <span class="tag">Aéronautique</span>
+            <span class="tag">Commandes de vol</span>
+            <span class="tag">Sécurité Aéro</span>
           </div>
         </div>
         <div class="card-actions">
-          <a href="#" class="btn-card btn-dark"><i class="fa-solid fa-file-pdf"></i> Voir le rapport PDF</a>
+          <a href="#" class="btn-card btn-dark"><i class="fa-solid fa-file-pdf"></i> Fiche Technique</a>
         </div>
       </div>
 
       <!-- Projet 3 -->
       <div class="project-card">
         <div>
-          <h3>Mesure des débattements & Suivi IA</h3>
-          <p class="project-meta">Système intelligent · MATLAB / Simulink / Python</p>
-          <p class="project-desc">Conception d'un dispositif de mesure des débattements maximaux des gouvernes de vol avec suivi comportemental assisté par Intelligence Artificielle (comparaison continue par rapport à un profil nominal).</p>
+          <h3>Mesure des débattements & Suivi IA des gouvernes</h3>
+          <p class="project-meta">Système Intelligent · MATLAB / Python</p>
+          <p class="project-desc">Conception d'un système de mesure haute précision des débattements angulaires maximaux des gouvernes couplé à un suivi comportemental par IA pour comparaison automatique avec le profil nominal de vol.</p>
           <div class="tags">
             <span class="tag">MATLAB</span>
             <span class="tag">Python</span>
-            <span class="tag">IA</span>
-            <span class="tag">Commandes de vol</span>
+            <span class="tag">Intelligence Artificielle</span>
+            <span class="tag">Analyse comportementale</span>
           </div>
         </div>
         <div class="card-actions">
-          <a href="#" class="btn-card btn-dark"><i class="fa-solid fa-file-pdf"></i> Voir la démo</a>
+          <a href="#" class="btn-card btn-dark"><i class="fa-solid fa-video"></i> Voir la Démo</a>
         </div>
       </div>
 
       <!-- Projet 4 -->
       <div class="project-card">
         <div>
-          <h3>Robotique de compétition : Robot Deathring</h3>
-          <p class="project-meta">ENIGROBOTS · Chef de projet Maquette</p>
-          <p class="project-desc">Direction d'une équipe de 35 personnes pour la conception et la fabrication du robot de combat Deathring et de l'arène pour la compétition nationale ENIGROBOTS.</p>
+          <h3>Robot de combat & Arène : Projet "Deathring"</h3>
+          <p class="project-meta">ENIGROBOTS 7.0 · Chef de Projet Technique</p>
+          <p class="project-desc">Pilotage d'une équipe de 35 ingénieurs pour la conception mécanique globale, l'usinage, l'assemblage et la mise au point du robot de compétition Deathring et de son arène sécurisée.</p>
           <div class="tags">
-            <span class="tag">Conception 3D</span>
             <span class="tag">Robotique</span>
-            <span class="tag">Gestion de projet</span>
+            <span class="tag">SolidWorks</span>
+            <span class="tag">Management (35 pers.)</span>
+            <span class="tag">Usinage</span>
           </div>
         </div>
         <div class="card-actions">
-          <a href="#" class="btn-card btn-outline"><i class="fa-solid fa-video"></i> Vidéo du projet</a>
+          <a href="#" class="btn-card btn-outline"><i class="fa-solid fa-images"></i> Galerie Photos</a>
+        </div>
+      </div>
+
+      <!-- Projet 5 -->
+      <div class="project-card">
+        <div>
+          <h3>Modélisation et simulation CFD d'une pompe centrifuge</h3>
+          <p class="project-meta">Simulation Numérique · ANSYS / SpaceClaim</p>
+          <p class="project-desc">Étude complète du comportement hydraulique interne d'une pompe centrifuge : analyse des performances, des hauteurs manométriques et des pertes de charge à travers le rotor et le stator.</p>
+          <div class="tags">
+            <span class="tag">ANSYS Fluent</span>
+            <span class="tag">Turbomachines</span>
+            <span class="tag">SpaceClaim</span>
+            <span class="tag">Hydraulique</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="#" class="btn-card btn-dark"><i class="fa-solid fa-file-pdf"></i> Rapport Étude</a>
+        </div>
+      </div>
+
+      <!-- Projet 6 -->
+      <div class="project-card">
+        <div>
+          <h3>Analyse par Éléments Finis (FEA) & Convergence de maillage</h3>
+          <p class="project-meta">Calcul de Structures · SolidWorks Simulation</p>
+          <p class="project-desc">Vérification de la fiabilité structurelle de pièces mécaniques sous sollicitations complexes. Études d'indépendance et de convergence de maillage pour garantir la précision des contraintes de Von Mises.</p>
+          <div class="tags">
+            <span class="tag">Éléments Finis (FEA)</span>
+            <span class="tag">SolidWorks Simulation</span>
+            <span class="tag">Dimensionnement</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="#" class="btn-card btn-dark"><i class="fa-solid fa-file-pdf"></i> Rapport FEA</a>
         </div>
       </div>
 
